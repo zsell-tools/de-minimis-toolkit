@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De Minimis Impact Assessment - Free Strategic Toolkit | ZSell</title>
+    <meta name="description" content="Free strategic tools to assess your vulnerability to the 2027 de minimis elimination and build competitive sourcing advantages.">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+        
+        :root {
+            --brand-primary: #FFAA00;
+            --content-background: #333333;
+            --body-text: #555555;
+            --interactive-elements: #007BFF;
+            --page-background: #F9F9F9;
+            --deep-contrast: #2D2D2D;
+            --alert-signal: #DC3545;
+            --success-indicator: #28A745;
+            --highlight: #FFC247;
+            --section-divider: #F0F0F0;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        body {
+            background-color: var(--page-background);
+            color: var(--body-text);
+            line-height: 1.6;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, var(--brand-primary), var(--highlight));
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.95;
+        }
+        
+        .deadline-banner {
+            background-color: var(--alert-signal);
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 18px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .intro-section {
+            padding: 60px 20px;
+            text-align: center;
+            background: white;
+        }
+        
+        .intro-section h2 {
+            color: var(--deep-contrast);
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+        
+        .intro-section p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .tool-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .tool-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+        }
+        
+        .tool-header {
+            background: var(--content-background);
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+        
+        .tool-icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+        
+        .tool-header h3 {
+            color: white;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        
+        .tool-header p {
+            opacity: 0.9;
+            font-size: 16px;
+        }
+        
+        .tool-body {
+            padding: 30px;
+        }
+        
+        .tool-features {
+            list-style: none;
+            margin: 20px 0;
+        }
+        
+        .tool-features li {
+            margin: 10px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .tool-features li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--success-indicator);
+            font-weight: bold;
+        }
+        
+        .tool-button {
+            background: linear-gradient(135deg, var(--interactive-elements), #0056b3);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            transition: all 0.3s;
+        }
+        
+        .tool-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0,123,255,0.3);
+        }
+        
+        .value-proposition {
+            background: var(--content-background);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        
+        .value-proposition h2 {
+            color: white;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+        
+        .value-proposition p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            opacity: 0.95;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 900px;
+            margin: 40px auto 0;
+        }
+        
+        .benefit-item {
+            background: rgba(255,255,255,0.1);
+            padding: 25px;
+            border-radius: 8px;
+            text-align: left;
+        }
+        
+        .benefit-item h4 {
+            color: var(--highlight);
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        
+        .premium-preview {
+            background: linear-gradient(135deg, var(--brand-primary), var(--highlight));
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        
+        .premium-preview h2 {
+            color: white;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+        
+        .premium-preview p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            opacity: 0.95;
+        }
+        
+        .premium-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            max-width: 800px;
+            margin: 30px auto;
+            text-align: left;
+        }
+        
+        .premium-feature {
+            background: rgba(255,255,255,0.2);
+            padding: 20px;
+            border-radius: 8px;
+        }
+        
+        .premium-feature h4 {
+            color: white;
+            margin-bottom: 10px;
+        }
+        
+        .premium-button {
+            background: white;
+            color: var(--brand-primary);
+            padding: 15px 40px;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+            transition: all 0.3s;
+        }
+        
+        .premium-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(255,255,255,0.3);
+        }
+        
+        .footer {
+            background: var(--deep-contrast);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        .footer p {
+            margin-bottom: 10px;
+            opacity: 0.8;
+        }
+        
+        .footer a {
+            color: var(--highlight);
+            text-decoration: none;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+            
+            .hero p {
+                font-size: 18px;
+            }
+            
+            .tools-grid {
+                grid-template-columns: 1fr;
+                padding: 40px 20px;
+            }
+            
+            .intro-section h2,
+            .value-proposition h2,
+            .premium-preview h2 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="deadline-banner">
+        ⚠️ CRITICAL DEADLINE: July 1, 2027 - De minimis $800 exemption eliminated - 685 days remaining
+    </div>
+    
+    <div class="hero">
+        <h1>💀 De Minimis Impact Assessment</h1>
+        <p>Free strategic tools to evaluate your vulnerability to the 2027 sourcing crisis and build competitive advantages while competitors scramble.</p>
+    </div>
+    
+    <div class="intro-section">
+        <div class="container">
+            <h2>The $800 Import Exemption Dies in 685 Days</h2>
+            <p>Most sellers will panic in 2027. Strategic operators are building supply chain advantages now. Use these free tools to assess your risk, plan your transition, and turn disruption into market dominance.</p>
+        </div>
+    </div>
+    
+    <div class="tools-grid">
+        <!-- Vulnerability Calculator -->
+        <div class="tool-card">
+            <div class="tool-header">
+                <div class="tool-icon">📊</div>
+                <h3>Vulnerability Calculator</h3>
+                <p>10-question risk assessment with instant scoring</p>
+            </div>
+            <div class="tool-body">
+                <p>Evaluate your current dependency on the de minimis exemption and get your personalized risk score with financial impact estimates.</p>
+                <ul class="tool-features">
+                    <li>Interactive 10-question assessment</li>
+                    <li>Instant risk scoring (0-100 scale)</li>
+                    <li>Financial impact calculations</li>
+                    <li>Personalized recommendations</li>
+                    <li>Strategic priority identification</li>
+                </ul>
+                <a href="vulnerability-calculator.html" class="tool-button">Start Risk Assessment →</a>
+            </div>
+        </div>
+        
+        <!-- Supplier Comparison -->
+        <div class="tool-card">
+            <div class="tool-header">
+                <div class="tool-icon">🔍</div>
+                <h3>Supplier Research Template</h3>
+                <p>Compare domestic vs international sourcing options</p>
+            </div>
+            <div class="tool-body">
+                <p>Systematically evaluate suppliers using post-2027 realities with weighted scoring across 5 critical factors.</p>
+                <ul class="tool-features">
+                    <li>5-criteria evaluation framework</li>
+                    <li>Post-2027 cost calculations</li>
+                    <li>Weighted scoring system</li>
+                    <li>Automatic recommendations</li>
+                    <li>Save and print results</li>
+                </ul>
+                <a href="supplier-comparison.html" class="tool-button">Compare Suppliers →</a>
+            </div>
+        </div>
+        
+        <!-- Critical Dates -->
+        <div class="tool-card">
+            <div class="tool-header">
+                <div class="tool-icon">📅</div>
+                <h3>685-Day Action Timeline</h3>
+                <p>Critical dates and milestone checklist</p>
+            </div>
+            <div class="tool-body">
+                <p>Your complete 18-month preparation roadmap with key milestones, action items, and progress tracking.</p>
+                <ul class="tool-features">
+                    <li>Phase-by-phase timeline</li>
+                    <li>Monthly action framework</li>
+                    <li>Progress tracking scorecard</li>
+                    <li>Success indicators</li>
+                    <li>Printable checklist format</li>
+                </ul>
+                <a href="critical-dates.html" class="tool-button">Get Timeline →</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="value-proposition">
+        <div class="container">
+            <h2>Why These Tools Matter</h2>
+            <p>The de minimis elimination creates the biggest supply chain disruption in e-commerce history. These tools help you turn crisis into competitive advantage.</p>
+            
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <h4>🎯 Strategic Advantage</h4>
+                    <p>Build competitive moats while others react in panic</p>
+                </div>
+                <div class="benefit-item">
+                    <h4>💰 Cost Optimization</h4>
+                    <p>Lock in advantageous pricing before demand surge</p>
+                </div>
+                <div class="benefit-item">
+                    <h4>⚡ Speed to Market</h4>
+                    <p>18-month head start on sourcing transitions</p>
+                </div>
+                <div class="benefit-item">
+                    <h4>🛡️ Risk Mitigation</h4>
+                    <p>Systematic approach to supply chain resilience</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="premium-preview">
+        <div class="container">
+            <h2>🛠️ Ready for Complete Strategic Implementation?</h2>
+            <p>These free tools show you the framework. The Complete De Minimis Transition Toolkit provides your full 18-month implementation roadmap with advanced strategic resources.</p>
+            
+            <div class="premium-features">
+                <div class="premium-feature">
+                    <h4>📊 Advanced Financial Models</h4>
+                    <p>3-scenario planning with cash flow projections</p>
+                </div>
+                <div class="premium-feature">
+                    <h4>⭐ Comprehensive Supplier Scorecards</h4>
+                    <p>50+ criteria evaluation framework</p>
+                </div>
+                <div class="premium-feature">
+                    <h4>📅 Detailed Project Timeline</h4>
+                    <p>Gantt charts with dependencies and milestones</p>
+                </div>
+                <div class="premium-feature">
+                    <h4>✅ Customs Compliance Guide</h4>
+                    <p>HTS codes, documentation, broker selection</p>
+                </div>
+                <div class="premium-feature">
+                    <h4>📈 Strategic Positioning Plans</h4>
+                    <p>Competitive advantage frameworks</p>
+                </div>
+                <div class="premium-feature">
+                    <h4>🎯 Implementation Support</h4>
+                    <p>Step-by-step execution guides</p>
+                </div>
+            </div>
+            
+            <a href="#" class="premium-button">Get Complete Toolkit - $49/month</a>
+            <p style="margin-top: 15px; font-size: 16px; opacity: 0.9;">Strategic planning resources for sophisticated operators</p>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <div class="container">
+            <p>Created by <a href="https://zsell.ai">ZSell</a> - Strategic business intelligence for e-commerce operators</p>
+            <p style="font-size: 14px; margin-top: 20px;">These tools are provided for educational purposes. Strategic planning decisions should be validated with qualified professionals.</p>
+        </div>
+    </div>
+    
+    <script>
+        // Simple analytics tracking for tool usage
+        document.addEventListener('DOMContentLoaded', function() {
+            const toolButtons = document.querySelectorAll('.tool-button');
+            
+            toolButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    const toolName = this.closest('.tool-card').querySelector('h3').textContent;
+                    console.log('Tool accessed:', toolName);
+                    // Add your analytics tracking here if needed
+                });
+            });
+        });
+    </script>
+</body>
+</html>
