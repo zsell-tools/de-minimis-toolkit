@@ -59,6 +59,15 @@
             opacity: 0.9;
         }
         
+        .deadline-alert {
+            background-color: var(--alert-signal);
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-weight: 500;
+            font-size: 18px;
+        }
+
         .content {
             padding: 40px;
         }
@@ -255,6 +264,10 @@
         <div class="header">
             <h1>🔍 Supplier Research Template</h1>
             <p>Compare domestic vs international sourcing options systematically</p>
+        </div>
+        
+        <div class="deadline-alert">
+            ⚠️ CRITICAL DEADLINE: July 1, 2027 - De minimis $800 exemption eliminated - 685 days remaining
         </div>
         
         <div class="content">
@@ -496,6 +509,26 @@
     </div>
 
     <script>
+        function updateCountdown() {
+            const targetDate = new Date('2027-07-01T00:00:00');
+            const today = new Date();
+            const timeDiff = targetDate.getTime() - today.getTime();
+            const daysRemaining = Math.ceil(timeDiff / (1000 * 3600 * 24));
+            
+            // Update all countdown displays
+            const countdownElements = document.querySelectorAll('.days-remaining');
+            countdownElements.forEach(element => {
+                element.textContent = daysRemaining;
+            });
+            
+            // Update the main deadline alert
+            const deadlineAlert = document.querySelector('.deadline-alert');
+            if (deadlineAlert) {
+                deadlineAlert.innerHTML = `⚠️ CRITICAL DEADLINE: July 1, 2027 - <span class="days-remaining">${daysRemaining}</span> Days Remaining ⚠️`;
+            }
+        }
+        document.addEventListener('DOMContentLoaded', updateCountdown);
+
         // Add event listeners to all score inputs
         document.addEventListener('DOMContentLoaded', function() {
             const inputs = document.querySelectorAll('input[type="number"]');
