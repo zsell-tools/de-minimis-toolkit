@@ -282,6 +282,60 @@
             box-shadow: 0 4px 15px rgba(255,255,255,0.3);
         }
         
+        .newsletter-cta {
+            background: var(--content-background);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        
+        .newsletter-cta h2 {
+            color: white;
+            margin-bottom: 20px;
+        }
+        
+        .newsletter-cta p {
+            font-size: 18px;
+            max-width: 600px;
+            margin: 0 auto 30px;
+            opacity: 0.95;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .cta-button {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+        
+        .cta-button.primary {
+            background: var(--brand-primary);
+            color: white;
+        }
+        
+        .cta-button.secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+        }
+
         .footer {
             background: var(--deep-contrast);
             color: white;
@@ -430,44 +484,17 @@
             </div>
         </div>
     </div>
-    
-    <div class="premium-preview">
-        <div class="container">
-            <h2>🛠️ Ready for Complete Strategic Implementation?</h2>
-            <p>These free tools show you the framework. The Complete De Minimis Transition Toolkit provides your full 18-month implementation roadmap with advanced strategic resources.</p>
-            
-            <div class="premium-features">
-                <div class="premium-feature">
-                    <h4>📊 Advanced Financial Models</h4>
-                    <p>3-scenario planning with cash flow projections</p>
-                </div>
-                <div class="premium-feature">
-                    <h4>⭐ Comprehensive Supplier Scorecards</h4>
-                    <p>50+ criteria evaluation framework</p>
-                </div>
-                <div class="premium-feature">
-                    <h4>📅 Detailed Project Timeline</h4>
-                    <p>Gantt charts with dependencies and milestones</p>
-                </div>
-                <div class="premium-feature">
-                    <h4>✅ Customs Compliance Guide</h4>
-                    <p>HTS codes, documentation, broker selection</p>
-                </div>
-                <div class="premium-feature">
-                    <h4>📈 Strategic Positioning Plans</h4>
-                    <p>Competitive advantage frameworks</p>
-                </div>
-                <div class="premium-feature">
-                    <h4>🎯 Implementation Support</h4>
-                    <p>Step-by-step execution guides</p>
-                </div>
-            </div>
 
-            <a href="#" class="premium-button">Get Complete Toolkit - $49/month*</a>
-            <p style="margin-top: 15px; font-size: 16px; opacity: 0.9;">Includes weekly newsletter and future premium digital products</p>
+    <div class="newsletter-cta">
+        <div class="container">
+            <h2>🎯 Strategic Analysis Newsletter</h2>
+            <p>Join 826+ sophisticated e-commerce operators who receive weekly strategic insights, frameworks, and early access to new tools.</p>
+            <div class="cta-buttons">
+                <a href="https://zsell.beehiiv.com/subscribe" class="cta-button primary">Subscribe Free</a>
+            </div>
         </div>
-    </div>
-    
+    </div>    
+
     <div class="footer">
         <div class="footer-content">
             <p><strong>ZSell Tools</strong> - Strategic business intelligence for e-commerce operators</p>
